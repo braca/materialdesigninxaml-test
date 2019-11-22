@@ -27,9 +27,9 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
-                
+
                 <views:View1 Grid.Row="0" Margin="0,0,5,0" />
-                
+
                 <Grid Grid.Row="1" Margin="0,0,5,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto" />
@@ -44,7 +44,7 @@
                     <TextBlock Text="Show Positions_" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="5,0,0,0" />
                     <ComboBox materialDesign:ComboBoxAssist.ClassicMode="True" Grid.Row="0" Grid.Column="2"/>
                 </Grid>
-                
+
                 <views:View2 Grid.Row="2" Margin="0,5,5,0" />
             </Grid>
         </Grid>

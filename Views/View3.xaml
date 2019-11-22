@@ -17,6 +17,8 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <TextBlock Margin="5,0,0,0" Text="Use Kit Settings Colors" Grid.Row="1" Grid.Column="0" />
+        <!-- Swap the next line with line above -->
+        <!-- <TextBlock Margin="5,0,0,0" Text="Use Kit Settings Colors 1" Grid.Row="1" Grid.Column="0" />-->
         <ComboBox Grid.Row="0" Grid.Column="2" />
     </Grid>
 </UserControl>
