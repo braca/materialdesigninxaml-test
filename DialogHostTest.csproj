@@ -1,0 +1,69 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>DialogHostTest</RootNamespace>
+    <AssemblyName>DialogHostTest</AssemblyName>
+    <OutputType>winexe</OutputType>
+    <TargetFramework>net472</TargetFramework>
+    <OutputTypeEx>winexe</OutputTypeEx>
+    <Version>20.0.0.0</Version>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <Title>DialogHostTest</Title>
+    <Description>Test</Description>
+    <Copyright>Copyright</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Page Include="**\*.xaml" SubType="Designer" Generator="MSBuild:Compile" Exclude="App.xaml" />
+    <Compile Update="**\*.xaml.cs" SubType="Designer" DependentUpon="%(Filename)" />
+
+    <None Update="Assets\**\*" />
+
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MsBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="3.6.0" />
+    <PackageReference Include="MaterialDesignColors" Version="1.2.0" />
+    <PackageReference Include="MaterialDesignThemes" Version="2.6.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="3.0.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.0.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="3.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="3.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Primitives" Version="3.0.1" />
+    <PackageReference Include="Microsoft.Net.Compilers.Toolset" Version="3.3.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Portable.BouncyCastle" Version="1.8.5.2" />
+    <PackageReference Include="Serilog" Version="2.9.0" />
+    <PackageReference Include="Serilog.Extensions.Logging" Version="3.0.1" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="3.1.1" />
+    <PackageReference Include="Serilog.Sinks.File" Version="4.1.0" />
+    <PackageReference Include="SixLabors.Core" Version="1.0.0-beta0008" />
+    <PackageReference Include="SixLabors.Fonts" Version="1.0.0-beta0009" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="1.0.0-beta0007" />
+    <PackageReference Include="SixLabors.ImageSharp.Drawing" Version="1.0.0-beta0007" />
+    <PackageReference Include="SixLabors.Shapes" Version="1.0.0-beta0009" />
+    <PackageReference Include="System.Buffers" Version="4.5.0" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.6.0" />
+    <PackageReference Include="System.Management" Version="4.6.0" />
+    <PackageReference Include="System.Memory" Version="4.5.3" />
+    <PackageReference Include="System.Numerics.Vectors" Version="4.5.0" />
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="4.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+</Project>

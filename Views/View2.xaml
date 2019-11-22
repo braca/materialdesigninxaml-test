@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="DialogHostTest.Views.View2"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:views="clr-namespace:DialogHostTest.Views"
+             mc:Ignorable="d">
+    <Grid VerticalAlignment="Top">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*" MinHeight="200"/>
+            <RowDefinition Height="450" MinHeight="450"/>
+        </Grid.RowDefinitions>
+
+        <GroupBox Header="GroupBox" Margin="0,0,0,5" BorderThickness="0" Grid.Row="1" Background="Transparent">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <ListBox 
+                    Grid.Row="0"
+                    Grid.ColumnSpan="5"
+                    SelectionMode="Extended"
+                    SelectedIndex="0">
+                </ListBox>
+                <Button Grid.Row="1" Grid.Column="1" ToolTip="aaaaaa" Height="24" Margin="5,5,0,0">
+                    <materialDesign:PackIcon Kind="ArrowUp" Height="16" Width="16" />
+                </Button>
+                <Button Grid.Row="1" Grid.Column="2" ToolTip="bbbbbbb" Height="24" Margin="5,5,0,0">
+                    <materialDesign:PackIcon Kind="ArrowDown" Height="16" Width="16" />
+                </Button>
+                <Button Grid.Row="1" Grid.Column="3" ToolTip="ccccccc" Height="24" Margin="5,5,0,0">
+                    <materialDesign:PackIcon Kind="TableMergeCells" Height="16" Width="16" />
+                </Button>
+                <Button Grid.Row="1" Grid.Column="4" ToolTip="ddddddddd" Height="24" Margin="5,5,0,0">
+                    <materialDesign:PackIcon Kind="Delete" Height="16" Width="16" />
+                </Button>
+            </Grid>
+        </GroupBox>
+
+        <views:View3 Grid.Row="2" />
+    </Grid>
+</UserControl>
